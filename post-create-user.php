@@ -1,6 +1,4 @@
-
 <?php
-
 include("RandomColor.php-master/src/RandomColor.php");
 use \Colors\RandomColor;
 $couleur = RandomColor::one(array('format'=>'hex'));
@@ -15,7 +13,6 @@ $name = $_POST['pseudo'];
 $ip = $_POST['ip'];
 $photo = $_POST['photo'];
 
-
     // Hachage du mot de passe
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -29,8 +26,6 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     {
         die('Erreur : ' .$e->getMessage());
     }
-
-    // Insertion de l'utilisateur et du mot de passe haché dans la table "users"
     $stmt = $baseMessages->prepare("INSERT INTO users (pseudo, ip, photo, couleur, password) VALUES (:pseudo, :ip, :photo, :couleur, :password)");
     $stmt -> execute([
         'pseudo' => $name,
@@ -39,6 +34,4 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         'couleur' => $couleur,
         'password' => $hashed_password
     ]);
-
-
-?>
+header("Location:index.php");
