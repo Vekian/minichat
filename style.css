@@ -1,0 +1,14 @@
+#messages {
+    height: 600px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+#users {
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+
+
