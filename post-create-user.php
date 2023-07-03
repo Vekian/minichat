@@ -33,7 +33,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     // Insertion de l'utilisateur et du mot de passe haché dans la table "users"
     $stmt = $baseMessages->prepare("INSERT INTO users (pseudo, ip, photo, couleur, password) VALUES (:pseudo, :ip, :photo, :couleur, :password)");
     $stmt -> execute([
-        'pseudo' => $pseudo,
+        'pseudo' => $name,
         'ip' => $ip,
         'photo' => $photo,
         'couleur' => $couleur,
