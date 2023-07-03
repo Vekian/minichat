@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Jul 03, 2023 at 02:21 PM
+-- Generation Time: Jul 03, 2023 at 02:40 PM
 -- Server version: 10.6.12-MariaDB-1:10.6.12+maria~ubu2004-log
 -- PHP Version: 8.1.14
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `minichat`
 --
+CREATE DATABASE IF NOT EXISTS `minichat` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `minichat`;
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,10 @@ INSERT INTO `users` (`id`, `pseudo`, `ip`, `photo`, `couleur`, `password`) VALUE
 (16, 'Gérard', '172.16.238.1', 'images/pierre.png', '#e886a8', ''),
 (18, 'julien', '172.16.238.1', 'images/pierre.png', '#ed4c3d', ''),
 (24, 'pierrick', '172.16.238.1', 'images/pierre.png', '#f4a666', ''),
-(27, 'fabrice', '172.16.238.1', 'images/photo.png', '#35e0d2', '$2y$10$tNd88HYnrak/5FMc1BwYoOry/uW3kH6/1fBmA13vRiT1Y0vb4/haa');
+(27, 'fabrice', '172.16.238.1', 'images/photo.png', '#35e0d2', '$2y$10$tNd88HYnrak/5FMc1BwYoOry/uW3kH6/1fBmA13vRiT1Y0vb4/haa'),
+(28, 'michou', '172.16.238.1', 'images/pikachu.png', '#c79de8', '$2y$10$W9nSRzqmv1QfCYj3z/cfNuzwAI9HodK1RPK09C/pnOWnydnpFGGqm'),
+(29, 'sarko', '172.16.238.1', 'images/pikachu.png', '#fcdfc2', '$2y$10$r2/oSWFxHH2rRsF3rzdNFuyoJES88B6q4LUFXkIfjC4KOAJEXGqbS'),
+(30, 'emeric', '172.16.238.1', 'images/pikachu.png', '#42d1ab', '$2y$10$8FQ6NeTTgEmYaq9msrItKu4qgifaaS3TKmP5Jocbf.vKDTJeHlDaq');
 
 --
 -- Indexes for dumped tables
@@ -168,7 +173,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
